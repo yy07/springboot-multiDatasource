@@ -3,15 +3,21 @@ spring:
     hikari:
       master:
         driver-class-name: com.mysql.jdbc.Driver
-        username: root
-        jdbc-url: jdbc:mysql://localhost:3306/emr?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
-        password: 123456
+#        username: root
+#        jdbc-url: jdbc:mysql://localhost:3306/emr?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+#        password: 123456
+        username: emr
+        jdbc-url: jdbc:mysql://172.16.0.2:3306/emr?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+        password: wowjoy@2018
         max-lifetime: 120000
         idle-timeout: 30000
       oracle:
-        jdbc-url: jdbc:oracle:thin:@192.168.88.46:1521:orcl
-        username: MD_SUPERVISION
-        password: JBX
+#        jdbc-url: jdbc:oracle:thin:@192.168.88.46:1521:orcl
+#        username: MD_SUPERVISION
+#        password: JBX
+        jdbc-url: jdbc:oracle:thin:@172.26.80.254:1523:orcl
+        username: md_supervision
+        password: Stxzyy@@#1
         driver-class-name: oracle.jdbc.OracleDriver
         borrowConnectionTimeout: 30
         loginTimeout: 30
@@ -45,4 +51,4 @@ mybatis-plus:
   mapper-locations: /mapper/MD_SUPERVISION/*.xml
 
 
-days: 100
+days: 18
