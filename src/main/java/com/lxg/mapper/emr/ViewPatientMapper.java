@@ -20,6 +20,6 @@ public interface ViewPatientMapper {
 
 
     public List<Map> getMedicalStaffInfo(String tableName);
-    @Select("select * from aa_songtao.${tableName}  WHERE (TO_DAYS(NOW())-TO_DAYS(CREATE_DATE))<${days}")
+    @Select("select * from ${tableName}  WHERE (TO_DAYS(NOW())-TO_DAYS(CREATE_DATE))>0 and  (TO_DAYS(NOW())-TO_DAYS(CREATE_DATE))<=${days}")
     public List<Map> getdata(String tableName,String days);
 }

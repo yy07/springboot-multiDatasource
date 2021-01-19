@@ -1,3 +1,5 @@
+server:
+  port: 9091
 spring:
   datasource:
     hikari:
@@ -8,7 +10,7 @@ spring:
 #        password: 123456
         username: emr
         jdbc-url: jdbc:mysql://172.16.0.2:3306/emr?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
-        password: wowjoy@2018
+        password: Wowjoy@2018
         max-lifetime: 120000
         idle-timeout: 30000
       oracle:
@@ -28,9 +30,12 @@ spring:
         minPoolSize: 3
         uniqueResourceName: orderDataSource
       drug:
-        jdbc-url: jdbc:oracle:thin:@192.168.88.46:1521:orcl
-        username: MD_SUPERVISION
-        password: JBX
+#        jdbc-url: jdbc:oracle:thin:@192.168.88.46:1521:orcl
+#        username: MD_SUPERVISION
+#        password: JBX
+        jdbc-url: jdbc:oracle:thin:@172.26.80.254:1523:orcl
+        username: md_supervision
+        password: Stxzyy@@#1
         driver-class-name: oracle.jdbc.OracleDriver
         borrowConnectionTimeout: 30
         loginTimeout: 30
@@ -44,6 +49,8 @@ spring:
 
 
 logging:
+  file:
+    name: D:/log/lab.log
   level:
     com.lxg: debug
 
@@ -52,3 +59,7 @@ mybatis-plus:
 
 
 days: 18
+#dataSource: aa_songtao
+dataSource: drugadmin
+
+
